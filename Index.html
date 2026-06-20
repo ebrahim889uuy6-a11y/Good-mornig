@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مشروع نموذج تسجيل الطالب</title>
+    <style>
+        /* تنسيقات CSS لتحسين مظهر النموذج والجدول واستهداف المحاذاة والتباعد */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 40px;
+            color: #333;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h2, h3 {
+            text-align: center;
+            color: #1a73e8;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* لضمان التباعد والمحاذاة المناسبة */
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #155cb4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f1f3f4;
+            color: #202124;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>نموذج تسجيل الطالب</h2>
+    
+    <!-- نموذج الإدخال باستخدام طريقة POST المحددة في المتطلبات -->
+    <form action="process.php" method="POST">
+        <div class="form-group">
+            <label>اسم الطالب:</label>
+            <input type="text" name="student_name" required>
+        </div>
+        <div class="form-group">
+            <label>عنوان البريد الإلكتروني:</label>
+            <input type="email" name="student_email" required>
+        </div>
+        <div class="form-group">
+            <label>رقم الطالب:</label>
+            <input type="text" name="student_id" required>
+        </div>
+        <div class="form-group">
+            <label>سنة الدراسة:</label>
+            <input type="number" name="study_year" required>
+        </div>
+        <div class="form-group">
+            <label>اسم الدفعة:</label>
+            <input type="text" name="batch_name" required>
+        </div>
+        <button type="submit">إرسال البيانات</button>
+    </form>
+
+    <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ddd;">
+
+    <h3>قائمة الطلاب المسجلين</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>اسم الطالب</th>
+                <th>البريد الإلكتروني</th>
+                <th>رقم الطالب</th>
+                <th>سنة الدراسة</th>
+                <th>اسم الدفعة</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
